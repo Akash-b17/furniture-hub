@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FurnitureHub | Checkout</title>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K4NMVN23');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4NMVN23"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <main class="p-6 max-w-xl mx-auto bg-white rounded shadow">
+    <h1 class="text-2xl font-bold mb-4">Checkout</h1>
+    <form id="checkoutForm">
+      <label class="block mb-2">Name
+        <input type="text" class="w-full border p-2 rounded mt-1" required />
+      </label>
+      <label class="block mb-2">Email
+        <input type="email" class="w-full border p-2 rounded mt-1" required />
+      </label>
+      <label class="block mb-4">Address
+        <textarea class="w-full border p-2 rounded mt-1" required></textarea>
+      </label>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Purchase</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('checkoutForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Purchase successful!');
+      // Event push to dataLayer can be added later here for GA4
+    });
+  </script>
+</body>
+</html>
