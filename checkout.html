@@ -42,14 +42,26 @@
   <script>
     document.getElementById('checkoutForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Purchase successful!');
+
+      // Define total purchase amount (replace with dynamic calculation if available)
+      var totalAmount = 19999;
+
+      // Ensure dataLayer exists
+      window.dataLayer = window.dataLayer || [];
+
+      // Push purchase event to dataLayer
       dataLayer.push({
         event: 'purchase',
         value: totalAmount,
         currency: 'INR'
-      
-      // Event push to dataLayer can be added later here for GA4
+      });
+
+      alert('Purchase successful! Event sent to GA4.');
+
+      // Optionally submit form or redirect user after this
+      // this.submit(); // Uncomment to submit form normally
     });
   </script>
 </body>
 </html>
+
